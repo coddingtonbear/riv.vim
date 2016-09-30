@@ -41,6 +41,7 @@ syn match rstBlockQuoteAttr  `\v%(\_^\s*\n)@<=\s+---=\s.*`
 syn match   rstCommentTitle '\v(^\s+|(^\.\.\s+)@<=):=\u\w*(\s+\u\w*)*:' contained 
 syn cluster rstCommentGroup contains=rstCommentTitle,rstTodo
 
+syn region rstBulletListText start=`\v^\s*[-*+]\ze\s+` end=`\v\n\n`
 
 " File: "{{{1
 syn cluster rstCruft add=rstStandaloneHyperlink
