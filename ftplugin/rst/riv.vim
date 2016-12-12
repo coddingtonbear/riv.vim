@@ -8,7 +8,8 @@
 
 " for force reload
 let g:riv_force = exists("g:riv_force") ? g:riv_force : 0
-if exists("b:did_rstftplugin") && g:riv_force == 0 | finish | endif
+let g:riv_manual = exists("g:riv_manual") ? g:riv_manual : 0
+if (exists("b:did_rstftplugin") && g:riv_force == 0) || g:riv_manual | finish | endif
 let b:did_rstftplugin = 1
 let s:cpo_save = &cpo
 set cpo-=C
